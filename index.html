@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    I360 Web Design Template
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    <!-- resets browser defaults -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #5dbb63;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  width: 120px;
+  height: 50px;
+
+  text-decoration: none;
+  text-align: center;
+  
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#search {
+  width: 80px;
+  height: 40px;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 5px;
+  background-color: #333;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+body {
+    background: #333;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.card-heading,
+.card-subheading {
+    font-weight: bold
+}
+
+.card {
+    width: 450px;
+    height: 450px;
+    border: none;
+    border-radius: 10px
+}
+
+.form-control {
+    border: none;
+    border-radius: 10px
+}
+
+.fone {
+    padding-left: 30px
+}
+
+.form-control {
+    background-color: #eee !important
+}
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  
+ <h2></h2>
+ 
+</div>
+
+<!-- Header -->
+<div class="header">
+  <img class="logo" src="images/Logo.PNG" alt="logo"> 
+  <h1>Loan Wolf</h1>
+  <p>The <b>Peer-to-Peer</b> lending site.</p>
+  <div class="container d-flex justify-content-center">
+    <div class="card mx-5 my-5">
+        <div class="card-body px-2">
+            <h2 class="card-heading px-3">Sign Up</h2>
+            <h5 class="card-subheading px-3 pb-3">It's quick and easy.</h5>
+            <form>
+                <div class="row rone">
+                    <div class="form-group col-md-5 fone"> <input type="text" class="form-control" placeholder="First name"> </div>
+                    <div class="form-group col-md-5 ftwo"> <input type="text" class="form-control ml-3" placeholder="Last name"> </div>
+                </div>
+                <div class="row rtwo">
+                    <div class="form-group col-md-12 fthree"> <input type="email" class="form-control" placeholder="Mobile number or Email"> <small class="text-muted">
+                            <p class="para1 pt-2 pl-1">You'll need to confirm that email or phone belongs to you.</p>
+                        </small> </div>
+                </div>
+                <div class="row rthree">
+                    <div class="form-group col-md-5 ffour"> <input type="password" class="form-control" placeholder="Password"> </div>
+                    <div class="form-group col-md-5 ffive"> <input type="password" class="form-control ml-3" placeholder="Confirm password"> </div> <small class="text-muted px-3">
+                        <p class="para2 pl-3">Use 8 or more characters with a mix of letters,numbers &<br>symbols</p>
+                    </small>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row rfour">
+    <div class="col-md-4 ml-3"> <button type="submit" class="btn btn-primary mt-3"><span>Next step</span></button> </div>
+</div>
+</div>
+
+<!-- Navigation Bar -->
+
+
+<!-- The flexible grid (content) -->
+
+
+<!-- Footer -->
+<footer id="foot">
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h5 class="card-title text-center">Sign In</h5>
+                <form class="form-signin">
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputEmail">Email address</label>
+                  </div>
+    
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">Password</label>
+                  </div>
+    
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Remember password</label>
+                  </div>
+                  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+                  <hr class="my-4">
+                  <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                  <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</footer>
+
+</body>
+</html>

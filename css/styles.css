@@ -1,0 +1,342 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* START STYLES HERE */
+
+.body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #ffffff;
+  color: #4A3C31;
+}
+
+
+.flexbox {
+  background: #ffffff;
+  
+}
+
+.E {
+  font-size: 12px;
+  font-weight: bold;
+ 
+  left: 0;
+  top: 0;
+}
+a {
+  font-family: 'Varela Round', sans-serif;
+  text-decoration: None;
+  color: black;
+  background:#EDEBEB;
+  padding:1.0em, 1.0em;
+  margin: 0.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:15px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+p {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: black;
+}
+nav.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 999px;
+}
+
+
+
+.logo {
+  
+  width: 150px;
+  height: 150px;
+  padding: 12px 1.0em;
+  margin: 0.5em;
+  background: #5dbb63;
+  border: 6px solid black;
+  border-radius: 10px;
+  display: block;
+  z-index: 999px;
+}
+
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #EDEBEB;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #5dbb63;
+  color: white;
+}
+body {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #EDEBEB;
+  color: #EDEBEB;
+}
+.header {
+  background: #EDEBEB url(../images/luddy-bkg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 90%;
+ 
+  
+}
+.head {
+  background: #5dbb63 url(../images/luddy-bkg.jpg) no-repeat center center;
+  text-align: center;
+  height: 500px;
+  padding: 1.0em 2.5em;
+  border-radius: 1.0em;
+  opacity: 90%;
+  position: relative;
+  
+}
+
+
+h1 {
+  font-family: 'Stalinist One', cursive;
+  font-weight: normal;
+  font-size: 50px;
+ 
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 6px black;
+  /* background: rgba(237,235,235, 0.55); */
+}
+h2 {
+  font-family: 'Modak', cursive;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 2.0em 0 0.3em;
+  color: black;
+  text-align: center;
+  padding: 0.25em;
+}
+img {
+  background:  cover no-repeat;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: block;
+ 
+  border: none;
+}
+
+
+
+
+/* Buttons and Links */
+button {
+    font-family: 'Varela Round', sans-serif;
+    font-family: 'Modak', cursive;
+    background-color: #5dbb63;
+    border: 6px solid black;
+    border-radius: 10px;
+    color:#EDEBEB;
+   
+    display: inline-block;
+    font-size: 14px;
+    height: 25px;
+    letter-spacing: 1px;
+    transition: background-color .2s ease-out,color .2s ease-out,border-color .18s ease-out;
+}
+button:hover {
+    /* background-color: transparent; */
+    background: #EDEBEB;
+    color: #5dbb63;
+    border: 8px solid black;
+}
+a:link, a:visited {
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    z-index: 999px;
+}
+
+
+
+
+
+
+footer {
+  height: 250px;
+  padding: 2.0em 4.0em 3.0em;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: right;
+
+  background: #333; 
+}
+.links {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.about-links, .program-links {
+  padding: 1.0em  4.0em 2.0em 0;
+  height: 10px;
+  width: 300px;
+  display: block;
+
+  
+}
+a:link, a:visited {
+  padding: 0.5em;
+  margin: 0.5em;
+  color: white;
+  background-color:  #5dbb63;
+  text-align: center;
+  text-decoration: none;
+  border: 6px solid black;
+  border-radius: 10px;
+  
+}
+a:active, a:hover {
+  color: black;
+}
+h2 a:link, h2 a:visited {
+  font-weight: bold;
+  font-size: 20px;
+  color: White;
+}
+h2 a:active, h2 a:hover {
+  font-weight: normal;
+  font-size: 20px;
+  color: white;
+}
+
+
+
+
+
+
+
+h1 {
+  border-bottom: 2px solid black;
+  padding-bottom:0.5em;
+  padding: 25px;
+  margin: 30px;
+  color: #c8c8c8;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:black;
+}
+.web-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+
+
+@media screen and (max-width: 712px) {
+  .head {
+    border-radius: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 595px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 424px) {
+  h1 {
+    font-size: 36px;
+  }
+}
+
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
