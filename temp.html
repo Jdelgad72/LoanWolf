@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <style>
@@ -63,7 +62,6 @@
     .row {  
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
     }
     
     /* Create two unequal columns that sits next to each other */
@@ -85,7 +83,7 @@
     /* Main column */
     .main {
       flex: 70%;
-     
+      background-color: white;
       padding: 20px;
     }
     
@@ -156,33 +154,6 @@ button:hover {
     margin: 10px;
     padding: 10px;
 }
-table {
-  margin-bottom: 10px;
-  width:100%;
-}
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-th, td {
-  padding: 15px;
-  text-align: left;
-}
-#t01 tr:nth-child(even) {
-  background-color: #eee;
-}
-#t01 tr:nth-child(odd) {
- background-color: #fff;
-}
-#t01 th {
-  background-color: black;
-  color: white;
-}
-
-#myChart {
-  margin: 20px;
- 
-}
 
 
     </style>
@@ -201,11 +172,11 @@ th, td {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
         <ul class="navbar-nav mr-auto">
-          
+          <li class="nav-item active">
             <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-         
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="info.html">About Us</a>
+            <a class="nav-link" href="info.html">About us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -223,7 +194,12 @@ th, td {
           </li>
         </ul>
        
-    </nav>
+          
+        
+  
+        
+      
+  </nav>
   
 </div>
 
@@ -237,48 +213,20 @@ th, td {
     </div>
       <h1>Loan Wolf</h1>
       <p>The <b>Peer-to-Peer</b> lending site.</p>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+      
    
   </div>
   <!-- The flexible grid (content) -->
   <div class="row">
     <div class="col-sm-4">
       
-      
-
-<br>
-
-<table id="t01">
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th> 
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Jill</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-    <td>80</td>
-  </tr>
-</table>
-
     </div>
     <div class="col-sm-4">
-      <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+      
     </div>
-   
+    <div class="col-sm-4">
+      
+    </div>
   </div>
 </div>
 
@@ -306,31 +254,6 @@ th, td {
       </div>
   </section>
 </footer>
-
-<script>
-  var xValues = [50,60,70,80,90,100,110,120,130,140,150];
-  var yValues = [7,8,8,9,9,9,10,11,14,14,15];
-  
-  new Chart("myChart", {
-    type: "line",
-    data: {
-      labels: xValues,
-      datasets: [{
-        fill: false,
-        lineTension: 0,
-        backgroundColor: "rgba(0,0,255,1.0)",
-        borderColor: "rgba(0,0,255,0.1)",
-        data: yValues
-      }]
-    },
-    options: {
-      legend: {display: false},
-      scales: {
-        yAxes: [{ticks: {min: 6, max:16}}],
-      }
-    }
-  });
-  </script>
 
 </body>
 </html>
