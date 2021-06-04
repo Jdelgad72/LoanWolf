@@ -244,19 +244,9 @@ button:hover {
 }
 
 
+
     </style>
-<script>
-  var slider = document.getElementById("myRange");
-  var output = document.getElementById("demo");
-  output.innerHTML = slider.value;
-  
-  slider.oninput = function() {
-    output.innerHTML = this.value;
-  }
-  </script>
-  <script
-  src="https://www.paypal.com/sdk/js?client-id=AYJTrFiUsSB2QXF4uN1-OEx1-3XtDgPyYN0pqGvA44pelBSouVhx1jNScIYHhWjjibOKFD4RDrDAWorU"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
-</script>
+
   </head>
 <body>
 
@@ -337,9 +327,11 @@ button:hover {
         <label class="custom-control-label" for="save-info">Lend</label>
       </div>
       
-      <div id="paypal-button-container"></div>
+        <div id="paypal-button"></div>
       
     </div>
+
+    
     
     <div class="col-sm-4">
       <div class="container">
@@ -424,17 +416,62 @@ button:hover {
                 <div class="invalid-feedback">
                   Zip code required.
                 </div>
+                
               </div>
+             
             </div>
+            
     </div>
    
   </div>
 </div>
 </div>
 </div>
-</div>
+
 <br>
 
+
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+  paypal.Button.render({
+    // Configure environment
+    env: 'sandbox',
+    client: {
+      sandbox: 'AYXBDSgbIoe0KNpb_YnIOOYhmqnEOoGQfo2aj1TNDq_0BSK3CofUdoPJXxNssjvOz5Md-mJq1pkcx30L',
+      production: 'demo_production_client_id'
+    },
+    // Customize button (optional)
+    locale: 'en_US',
+    style: {
+      size: 'small',
+      color: 'gold',
+      shape: 'pill',
+    },
+
+    // Enable Pay Now checkout flow (optional)
+    commit: true,
+
+    // Set up a payment
+    payment: function(data, actions) {
+      return actions.payment.create({
+        transactions: [{
+          amount: {
+            total: '0.01',
+            currency: 'USD'
+          }
+        }]
+      });
+    },
+    // Execute the payment
+    onAuthorize: function(data, actions) {
+      return actions.payment.execute().then(function() {
+        // Show a confirmation message to the buyer
+        window.alert('Thank you for your purchase!');
+      });
+    }
+  }, '#paypal-button');
+
+</script>
 <footer id="foot">
   <section class="links">
       <div class="about-links">
@@ -459,6 +496,7 @@ button:hover {
       </div>
   </section>
 </footer>
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="../../../../assets/js/vendor/popper.min.js"></script>
@@ -486,44 +524,6 @@ button:hover {
       }, false);
     })();
   </script>
-
-
-<script>
-    paypal.Buttons({
-      createOrder: function(data, actions) {
-        // This function sets up the details of the transaction, including the amount and line item details.
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: '0.01'
-            }
-          }]
-        });
-      },
-      onApprove: function(data, actions) {
-        // This function captures the funds from the transaction.
-        return actions.order.capture().then(function(details) {
-          // This function shows a transaction success message to your buyer.
-          alert('Transaction completed by ' + details.payer.name.given_name);
-        });
-      }
-    }).render('#paypal-button-container');
-    //This function displays Smart Payment Buttons on your web page.
-  </script>
-<script>
-  var slider = document.getElementById("myRange");
-  var output = document.getElementById("demo");
-  output.innerHTML = slider.value;
-  
-  slider.oninput = function() {
-    output.innerHTML = this.value;
-  }
-  </script>
-  <script
-  src="https://www.paypal.com/sdk/js?client-id=AYJTrFiUsSB2QXF4uN1-OEx1-3XtDgPyYN0pqGvA44pelBSouVhx1jNScIYHhWjjibOKFD4RDrDAWorU"> // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
-</script>
-
-
 
 </body>
 </html>
