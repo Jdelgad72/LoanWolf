@@ -75,23 +75,9 @@ nav.sticky {
   z-index: 999px;
 }
 
-
-
-.logo {
-  
-  width: 150px;
-  height: 150px;
-  padding: 12px 1.0em;
-  margin: 0.5em;
-  background: #5dbb63;
-  border: 6px solid black;
-  border-radius: 10px;
-  display: block;
-  z-index: 999px;
+img {
+  border-radius: 15px;
 }
-
-
-
 
 
 
@@ -128,7 +114,7 @@ nav.sticky {
 }
 body {
  
-  background-color: #EDEBEB;
+  background-color: #5dbb63;
   color: black;
 }
 .header {
@@ -143,7 +129,7 @@ body {
   
 }
 .head {
-  background: #5dbb63 url(../images/luddy-bkg.jpg) no-repeat center center;
+  background: #333 url(../images/luddy-bkg.jpg) no-repeat center center;
   text-align: center;
   
   padding: 1.0em 2.5em;
@@ -314,6 +300,8 @@ h1 {
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
+  
+  width: 33%;
 }
 .marketing h2 {
   font-weight: 400;
@@ -331,6 +319,7 @@ h1 {
 
 .featurette-divider {
   margin: 3rem 0; /* Space out the Bootstrap <hr> more */
+  
 }
 
 hr {
