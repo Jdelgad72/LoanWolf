@@ -383,7 +383,9 @@ hr {
 }
 
 
-
+.container {
+  margin: auto;
+}
 
 
 /* MEDIA QUERIES FROM LARGEST TO SMALLEST */
