@@ -231,6 +231,7 @@ button:hover {
 
 /* Footer */
 .footer {
+  width: max-content;
   padding: 20px;
   text-align: center;
   background: #ddd;
@@ -243,8 +244,43 @@ button:hover {
   }
 }
 
+.slidecontainer {
+  width: 100%;
+}
 
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
 
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+h5 {
+  color:white;
+}
     </style>
 
   </head>
@@ -312,11 +348,17 @@ button:hover {
         <h2>Checkout form</h2>
         <p class="lead"></p>
       </div>
-  
+      <h5>Select your desired amount!</h5>
       <hr class="mb-4">
       <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <p>Value: <span id="demo"></span></p>
+        <input type="range" min="1" max="10000" value="50" class="slider3" id="myRange">
+        <p>Value: $<span id="demo"></span></p>
+      </div>
+      <h5>Select your interest rate!</h5>
+      <hr class="mb-4">
+      <div class="slidecontainer2">
+        <input type="range" min="1" max="10" value2="1" class="slider3" id="myRange2">
+        <p>Value: <span id="demo2"></span>%</p>
       </div>
       <div class="custom-control custom-checkbox">
         <input type="checkbox" class="custom-control-input" id="same-address">
@@ -327,7 +369,25 @@ button:hover {
         <label class="custom-control-label" for="save-info">Lend</label>
       </div>
       
-        <div id="paypal-button"></div>
+      <h5>Schedule Loan</h5>
+
+      <form action="/action_page.php">
+        <label for="birthday">Start</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+        <label for="birthday">End</label>
+        <input type="date" id="birthday2" name="birthday2">
+      </form>
+
+      <h5>Payment Increments</h5>
+
+      <form action="/action_page.php">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+        
+      </form>
+
+       
       
     </div>
 
@@ -420,6 +480,7 @@ button:hover {
               </div>
              
             </div>
+            <div id="paypal-button"></div>
             
     </div>
    
@@ -427,10 +488,7 @@ button:hover {
 </div>
 </div>
 </div>
-
-<br>
-
-
+</div>
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 <script>
   paypal.Button.render({
@@ -476,7 +534,7 @@ button:hover {
   <section class="links">
       <div class="about-links">
        
-        <p><a href="https://www.indiana.edu/admissions/apply.html">Our Mission</a></p>
+        <p><a href="info.html">Our Mission</a></p>
         
        
       
@@ -523,6 +581,20 @@ button:hover {
         });
       }, false);
     })();
+    var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider.value2;
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
   </script>
 
 </body>
