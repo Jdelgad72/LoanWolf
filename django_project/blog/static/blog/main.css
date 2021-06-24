@@ -9,7 +9,8 @@ body {
   }
 
   p {
-    color: #5dbb63;
+    color: black;
+    text-shadow: 2px 2px 5px #5dbb63;
   }
   
   ul {

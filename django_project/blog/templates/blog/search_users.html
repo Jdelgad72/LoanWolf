@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <center>
+    {% if searched %}
+        <h1> You Searched For {{
+            searched }}
+        </h1>
+        
+    {% else %}
+            <h1>Hey! You forgot To Search
+                For A User...
+            </h1>
+            
+    {% endif %}
+    
+
+
+    </center>
+
+{% endblock content %}
