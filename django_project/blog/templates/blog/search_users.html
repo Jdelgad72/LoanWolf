@@ -1,11 +1,14 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-    <center>
+   
     {% if searched %}
-        <h1> You Searched For {{
-            searched }}
+        <h1> You Searched For {{ searched }}
         </h1>
+        <br/>
+        {% for profile in profiles %}
+            {{profile}}<br/>
+        {% endfor %}
         
     {% else %}
             <h1>Hey! You forgot To Search
@@ -16,6 +19,6 @@
     
 
 
-    </center>
+    
 
 {% endblock content %}

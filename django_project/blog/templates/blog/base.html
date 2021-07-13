@@ -78,6 +78,18 @@
                 <li class="list-group-item list-group-item-light">Latest Posts</li>
                 <li class="list-group-item list-group-item-light">Announcements</li>
                 <li class="list-group-item list-group-item-light">Calendars</li>
+                <div>
+                  <center>
+                    <h1> {{ name }} {{ month }} {{ year }}</h1>
+                  
+                    As of {{ time }}
+                    <br/><br/>
+                    {{ cal|safe }}
+                    <br/><br/><br/><br/>
+                    Copyright (c) {{ current_year }}
+                  
+                  </center>
+                </div>
                 <li class="list-group-item list-group-item-light">etc</li>
               </ul>
             </p>
